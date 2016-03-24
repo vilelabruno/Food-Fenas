@@ -1,0 +1,87 @@
+* {padding:0px;margin:0px;font-family: 'Open Sans', sans-serif;font-weight: 300;}
+a {text-decoration: none;color:#333;}
+/*FUNCOES PRINCIPAIS*/
+.black {background:#333;opacity:0.5;width:100%;height:3000px;position:fixed;z-index:10;display:none;}
+
+
+#menu {width:100%;height:70px;background:#FAF8FB;}
+#menu #logo {width:80px;margin-left:60px;margin-top:12px;cursor:pointer;}
+#menu #ajuda {font-size:16px;float:right;margin:23px;cursor:pointer;}
+#menu #acesso {font-size:16px;float:right;margin:22px;margin-top:23px;cursor:pointer;}
+#menu #cadastro {font-size:16px;float:right;margin:0px;margin-top:23px;cursor:pointer;}
+
+#img_topo {width:100%;height:700px;}
+#img_topo #google {margin-top:90px;cursor:pointer;border-radius:5px;box-shadow:1px 1px 1px #CCC;width:150px;}
+#img_topo #formulario {width:40%;height:350px;background:#333;margin:0 auto;margin-top:-37%;background:url(../imagens/branco.fw.png);position:relative;z-index:7;}
+#img_topo #formulario #busca {width:82%;padding:4%;border:none;margin-left:5%;margin-top:40px;font-size:20px;outline:0}
+#img_topo #formulario #buscar {width:90%;padding:4%;font-weight:600;border:none;margin-left:5%;margin-top:5px;font-size:20px;outline:0;cursor:pointer;background:#F3E105;color:#333;}
+#mensa_1 {font-size:26px;text-align:center;margin-top:15px;color:#FFF;}
+#mensa_2 {font-size:18px;text-align:center;margin-top:20px;color:#FFF;}
+#mensa_3 {font-size:40px;color:#333;text-align:center;margin-top:-100px;font-weight:600;}
+#barra_mensa {width:30%;height:3px;background:#D2001B;margin:0 auto;margin-top:7px;}
+#mensagem_intro {font-size:20px;color:#333;width:80%;text-align: justify;margin-left:10%;margin-top:60px;}
+
+/*ESTABELECIMENTOS EM DESTAQUE*/
+#destaque {width:100%;background:#F3F3F3;margin-top:60px}
+#destaque #titulo {font-size:30px;font-weight:600;color:#333;text-align:center;margin-top:30px;}
+#destaque #molduras {width:30%;height:200px;background:url(http://cdn1.mundodastribos.com/wp-admin/uploads/2011/01/fachadas-comerciais-modernas.jpg);box-shadow:1px 1px 1px #CCC;margin-top:50px;float:left;margin-left:2.5%;}
+#destaque #molduras #titulo {font-size:25px;font-weight:600;color:#FFF;text-shadow:1px 1px 1px #333;margin-top:50px;}
+#destaque #todas {width:20%;padding:1%;background:#FFF;box-shadow:1px 1px 1px #CCC;margin-left:39.5%;margin-top:300px;text-align:center;}
+
+
+
+
+
+/*Popup de acesso*/
+.acesso {width:30%;height:400px;background:#FFF;position:fixed;margin-left:35%;z-index:11;margin-top:100px;display:none;}
+.acesso .logo {width:150px;margin-top:20px;}
+.acesso #submit {width:83.7%;padding:15px;background:#F6CB1D;border-bottom: none;cursor:pointer;}
+
+
+.group {position:relative;margin-bottom:23px;}
+input {font-size:16px;padding:10px 10px 10px 5px;display:block;width:80%;border:none;border-bottom:1px solid #CB2126;margin-left:7%;}
+input:focus {outline:none;}
+/* LABEL ======================================= */
+label {color:#333;font-size:16px;position:absolute;pointer-events:none;left:10%;top:10px;transition:0.2s ease all;-moz-transition:0.2s ease all;-webkit-transition:0.2s ease all;}
+/* active state */
+input:focus ~ label, input:valid ~ label {top:-20px;font-size:14px;color:#333;}
+/* BOTTOM BARS ================================= */
+.bar {position:relative;display:block;width:83.7%;margin-left:7%;}
+.bar:before, .bar:after {content:'';height:2px;width:0;bottom:1px;position:absolute;background:#CB2126;transition:0.2s ease all;-moz-transition:0.2s ease all;-webkit-transition:0.2s ease all;}
+.bar:before {left:50%;}
+.bar:after {right:50%;}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
